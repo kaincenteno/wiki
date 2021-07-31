@@ -2,7 +2,7 @@
 title: setup client
 description: here is a guide on how to setup the client
 published: true
-date: 2021-07-31T06:26:54.527Z
+date: 2021-07-31T16:45:11.346Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-07-31T00:51:51.573Z
@@ -18,7 +18,7 @@ dateCreated: 2021-07-31T00:51:51.573Z
   <li>Know how to use Command Prompt</li>
 </ol>
 <p>&nbsp;</p>
-<h6>Installation Steps</h6>
+<h6>Game - Installation Steps</h6>
 <ol>
   <li>Download the installer files in <a href="http://www.playonline.com/ff11us/download/media/install_win.html">here</a></li>
   <li>Run the file with extension .exe to decompress the installer.</li>
@@ -27,14 +27,28 @@ dateCreated: 2021-07-31T00:51:51.573Z
   <li>Once you are done with the installation we can move to the setup phase.</li>
 </ol>
 <p>&nbsp;</p>
-<h6>Setup</h6>
-<ol>
+<h6>Game - Update Steps</h6>
+<ul>
   <li>Open Playonline Viewer, and go through the prompts using your Playonline account you have registered previously. (If you don't have an account, you can enter a faux one that is 4 Letters, followed by 4 numbers.</li>
   <li>Close Playonline.</li>
   <li>Browse using “File Explorer” and go to C:\Program Files(x86)\Square Enix\Playonline\Final FantasyXI</li>
-  <li>Delete the FTABLE.DAT, and create file called file.txt</li>
-  <li>On file.txt, enter as the first line the following<br>123456:654321:./FTABLE.DAT<br>::</li>
+  <li>Delete the FTABLE.DAT, and create a new file called file.txt</li>
+  <li>Open file.txt and populate it with the info below, then save it</li>
+</ul>
+<pre><code class="language-plaintext">123456:654321:FTABLE.DAT
+::
+</code></pre>
+<ul>
   <li>Open Playonline and select “Repair Files”</li>
   <li>Select FFXI, and repair the files</li>
-</ol>
+  <li>It should tell that a file is missing, and that it needs repair, followed by a long download and install.</li>
+  <li>Once it's done repairing files we can move on the launch step</li>
+</ul>
 <p>&nbsp;</p>
+<h6>Game - First Run</h6>
+<ol>
+  <li>Download <a href="https://github.com/kaincenteno/xiloader/releases/tag/v1.2.1.1">xiloader.exe</a></li>
+  <li>Open Command Prompt as an Administrator</li>
+  <li>Find the folder where the file is and run it as follows</li>
+</ol>
+<pre><code class="language-plaintext">xiloader.exe --server xiweb.catsangel.com</code></pre>
