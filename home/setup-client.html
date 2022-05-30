@@ -28,7 +28,7 @@ dateCreated: 2021-07-31T00:51:51.573Z
 &nbsp;
 </code></pre>
 <ol>
-  <li>Open Playonline once more and choose <strong>Check Files</strong>.
+  <li>Open Playonline once more and choose <strong>Check Files</strong>.</li>
   <li>On the next screen, make sure you change the <strong>Playonline-compatible software</strong> choice to <strong>FINAL FANTASY XI</strong>.</li>
   <li>Click on <strong>Check Files</strong> to repair the files.</li>
   <li>It should tell that a file is missing and that it needs repair, followed by a long download and install.</li>
@@ -42,9 +42,10 @@ dateCreated: 2021-07-31T00:51:51.573Z
   <li>Fast internet connection.</li>
   <li>Admin rights on the machine.</li>
   <li>At least 10GB available.</li>
-  <li>Know how to use Windows Explorer.</li>
+  <li>Know how to use Windows File Explorer.</li>
   <li>Know how to run .exe files as an administrator.</li>
-  <li>Know how to use Command Prompt</li>
+  <li>Know how to use Windows Powershell as an administrator.</li>
+  <li>Know how to use Windows Command Prompt</li>
 </ol>
 <p>&nbsp;</p>
 <h6>Game - Installation Steps</h6>
@@ -58,14 +59,18 @@ dateCreated: 2021-07-31T00:51:51.573Z
 <p>&nbsp;</p>
 <h6>PlayOnline Setup</h6>
 <ul>
-  <li>Open PlayOnline Viewer, and go through the prompts using your PlayOnline account you have registered previously. (If you don't have an account, you can enter a faux one that is 4 Letters, followed by 4 numbers.</li>
+  <li>Open PlayOnline Viewer, and go through the prompts using your PlayOnline account you have registered previously. If you don't have an account, you can just enter a faux one that is 4 Letters, followed by 4 numbers (i.e., you can enter <code>ABCD1234</code> if you don't have one).</li>
   <li>Close PlayOnline.</li>
 </ul>
 <p>&nbsp;</p>
 <h6>Game - Update Steps (semi-automatic)</h6>
 <ul>
-  <li>Download and run the <a href="/update_xi.ps1">update_xi</a> script as an admin.</li>
-  <li>Open Playonline once more and choose <strong>Check Files</strong>.
+  <li>Download the <a href="/update_xi.ps1"><strong>update_xi.ps1</strong></a> script (note the location it was downloaded to, you'll need that shortly).</li>
+  <li>Open Powershell as an administrator.</li>
+  <li>Navigate to the folder that <strong>update_xi.ps1</strong> was downloaded to.</li>
+  <li>Run <strong>/update_xi.ps1</strong>.  Playonline should start automatically after this script completes.</li>
+  <li><strong>NOTE:</strong> If you encounter errors/issues with the above, <strong>STOP HERE</strong> and skip down to the steps in the "Game - Update Steps (manual)" section below.</li>
+  <li>If Playonline didn't automatically start, open Playonline once more and choose <strong>Check Files</strong>.</li>
   <li>On the next screen, make sure you change the <strong>Playonline-compatible software</strong> choice to <strong>FINAL FANTASY XI</strong>.</li>
   <li>Click on <strong>Check Files</strong> to repair the files.</li>
   <li>It should tell that a file is missing and that it needs repair, followed by a long download and install.</li>
@@ -82,7 +87,7 @@ dateCreated: 2021-07-31T00:51:51.573Z
 ::
 </code></pre>
 <ul>
-  <li>Open Playonline once more and choose <strong>Check Files</strong>.
+  <li>Open Playonline once more and choose <strong>Check Files</strong>.</li>
   <li>On the next screen, make sure you change the <strong>Playonline-compatible software</strong> choice to <strong>FINAL FANTASY XI</strong>.</li>
   <li>Click on <strong>Check Files</strong> to repair the files.</li>
   <li>It should tell that a file is missing and that it needs repair, followed by a long download and install.</li>
