@@ -1,7 +1,8 @@
 ﻿#Requires -RunAsAdministrator
 
-$game_path = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\PlayOnlineUS\InstallFolder').'0001'
-$pol_path = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\PlayOnlineUS\InstallFolder').'1000'
+$registry_path = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\PlayOnline*\InstallFolder"
+$game_path = (Get-ItemPropertyValue -Path "${registry_path}" -Name '0001')
+$pol_path = (Get-ItemPropertyValue -Path "${registry_path}" -Name '1000')
 $pol_path = "${pol_path}\pol.exe"
 
 $file_txt = @'
@@ -11,7 +12,7 @@ $file_txt = @'
 '@
 
 
-if (Get-Item ${game_path}file.txt) {
+if (Get-Item "${game_path}file.txt") {
     Remove-Item "${game_path}file.txt"
 }
 
