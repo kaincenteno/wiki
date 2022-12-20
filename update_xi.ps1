@@ -10,8 +10,11 @@ $file_txt = @'
 
 '@
 
-Remove-Item "${game_path}FTABLE.DAT"
-Remove-Item "${game_path}file.txt"
+
+if (Get-Item ${game_path}file.txt) {
+    Remove-Item "${game_path}file.txt"
+}
+
 New-Item -Path $game_path -Name 'file.txt' -ItemType "file" -Value $file_txt
 
 Start-Process -wait $pol_path
