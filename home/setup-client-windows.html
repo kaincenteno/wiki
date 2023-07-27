@@ -25,15 +25,16 @@ dateCreated: 2021-07-31T00:51:51.573Z
 <ol>
   <li>Download <a href="http://www.playonline.com/ff11us/download/media/install_win.html">installer files (download all of them to the same folder!)</a>.</li>
   <li>Run <strong>FFXIFullSetup_US.part1.exe</strong> to decompress installer files</li>
-  <li>Run <strong>FFXISETUP.exe</strong> after decompression completes.</li>
-  <li>Make sure to install everything that prompts on the installer.</li>
+  <li>Run <strong>FFXISETUP.exe</strong> after decompression completes to begin installing Final Fantasy XI (FFXI) and PlayOnline (POL).</li>
+  <li>To avoid possible future issues with allowing FFXI to access/modify its own files, it is best to install FFXI and POL to a folder of its own on your computer.
+  <li>Make sure to <strong>install everything</strong> that prompts on the installer.</li>
   <li>Once you are done with the installation we can move to the setup phase.</li>
 </ol>
 <p>&nbsp;</p>
 <h6>PlayOnline Setup</h6>
 <ul>
-  <li>Open PlayOnline Viewer, and go through the prompts using your PlayOnline account you have registered previously. If you don't have an account, you can just enter a faux one that is 4 Letters, followed by 4 numbers (i.e., you can enter <code>ABCD1234</code> if you don't have one).</li>
-  <li>Close PlayOnline.</li>
+  <li>Open PlayOnline Viewer and go through the prompts using your PlayOnline account you have registered previously. If you don't have an account, you can just enter a faux one that is 4 Letters, followed by 4 numbers (i.e., you can enter <code>ABCD1234</code> if you don't have one).</li>
+  <li><strong>Close PlayOnline.</strong>strong></li>
 </ul>
 <p>&nbsp;</p>
 <h6>Game - Update Steps (semi-automatic)</h6>
@@ -68,22 +69,55 @@ dateCreated: 2021-07-31T00:51:51.573Z
   <li>Once it's done repairing files, close Playonline. We can move on to the “Game - First Run” step.</li> 
 </ul>
 <p>&nbsp;</p>
-<h6>Game - First Run (xiloader)</h6>
+<h6>Game - First Run</h6>
+<ol><li>To run FFXI for the first time (and all subsequent times), you have a choice of three "bootloaders" that are used to load the game and connect to the XIWeb game server:</li></ol>
+<p>&nbsp;</p> 
+<h6>XiLoader (the barebones bootloader, loads the game and nothing else, best for testing out issues before reporting them)</h6>
 <ol>
-  <li>Download <a href="https://github.com/kaincenteno/xiloader/releases/tag/v1.2.1.1">xiloader.exe</a></li>
-  <li>Open Command Prompt as an Administrator</li>
-  <li>Find the folder where the file is and run it as follows</li>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">XiLoader.exe</a> <strong>into a directory of its own</strong>.</li>
+  <li>Open Command Prompt <strong>Administrative-level</strong> privileges.</li>
+  <li>Find the folder where you downloaded XILoader.exe and run it as follows</li>
 </ol>
 <pre><code class="language-plaintext">xiloader.exe --server xiweb.catsangel.com</code></pre>
 <p>&nbsp;</p>
-<h6>Game - First Run (Ashita)</h6>
+<h6>Ashita (a bootloader that includes a variety of addons/plugins to enhance your playing experience) (more geared towards players on private servers like XIWeb)</h6>
 <ol>
   <li>Download <a href="https://git.ashitaxi.com/Ashita/Ashitav3-Launcher/raw/master/Ashita.exe">Ashita.exe</a> <strong>into a directory of its own</strong>.</li>
   <li>Run Ashita.exe with <strong>Administrative-level</strong> privileges.  Ashita will download all other necessary files and then present you with the Ashita launcher</li>
-  <li>Click on the <strong>+</strong> icon in the bottom-left of the Ashita Launcher window.</li>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">XiLoader.exe</a> into the <strong>ffxi-bootmod</strong> sub-folder of your Ashita folder.</li>
+  <li>In the Ashita launcher, click on the <strong>+</strong> icon in the bottom-left of the Ashita Launcher window.</li>
   <li>Click on the New Configuration that was just created then click on the <strong>Pencil</strong> icon (that is to the right of the <strong>+</strong> icon) in the bottom-left of the Ashita Launcher window.</li>
   <li>Give your new configuration a name (xiweb or whatever name you wish).</li>
-  <li>For the <strong>File:</strong> line, use: <code>.\\ffxi-bootmod\\pol.exe</code></li>
+  <li>For the <strong>File:</strong> line, use: <code>.\\ffxi-bootmod\\xiloader.exe</code></li>
   <li>For the <strong>Command:</strong> line, use: <code>--server xiweb.catsangel.com</code></li>
   <li>Click on the icon in the bottom-center of the window to save your changes (the icon looks like a sheet of paper with a checkmark).</li>
+  <li>Double-click on the name that you gave for the configuration you just made (in the Ashita launcher) to launch the bootloader.</li>
+  <li>If this is your first time playing on XIWeb, you will need to create an account and a password</li> and use such to connect to XIWeb.</li>
+  <li>If you already have an account on XIWeb, you need to use the account and password you created to connect to XIWeb.</li>
+</ol>
+<h6>Windower (a bootloader that includes a variety of addons/plugins to enhance your playing experience) (more geared towards players on retail FFXI but can also be used for private servers like XIWeb)</h6>
+<ol>
+  <li>Download <a href="https://update.windower.net/live/windower.msi">Windower.msi</a> <strong>into a directory of its own</strong>.</li>
+  <li>Run Windower.msi with <strong>Administrative-level</strong> privileges.  Windower will install to a folder of your choice (best to use the folder you downloaded Windower.msi into)</li>
+  <li>Navigate to the folder you installed Windower into and run Windower.exe <strong>Administrative-level</strong> privileges. Windower will download all other necessary files and then present you with the Windower launcher.</li>
+  <li>In the Windower Launcher, click on the <strong>+</strong> in the bottom-left of the Ashita Launcher window to create a new profile.</li>
+  <li>Give the new profile a name (click on the <strong>New Profile 1</strong> and change it to a new name of your choice) and then click on the <strong>left-pointing arrow in the upper-left corner of the profile. (Make sure to remember the name you gave the profile)</li>
+  <li><strong>Close the Windower launcher.</strong></li>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">XiLoader.exe</a> into the <strong>PlayOnlineViewer</strong> sub-folder of the SquareEnix subfolder of your PlayOnline folder on your computer (created in the Game - Installation steps at the top of this page) .</li>
+  <li>Navigate to the folder that you installed Windower into and open <strong>settings.xml</strong> with some type of text editor, such as Windows Notepad or Notepad++.</li>
+  <li>You'll need to add the <executable>XiLoader.exe</executable> to every profile (including the profile you just created) you see in settings.xml, as well as the <args> </args> with your server information and login.</li>
+  <li>Here is an example profile (you can copy and paste the below code block into the file:</li>
+  <pre><code class="language-plaintext"><profile name="local">
+    <consolekey>Insert</consolekey>
+    <args>--server xiweb.catsangel.com</args>
+    <executable>DRIVE_LETTER:\path\to\xiloader.exe</executable>
+  </profile>
+  </code></pre>
+  <li>Note the <code>"path\to\"</code> portion in the <code><executable></code> section cannot contain spaces and cannot be a relative path.</li>
+  <li>An example of the path is: <code><executable>C:\PlayOnline\SquareEnix\PlayOnlineViewer\</executable></code></li>
+  <li><strong>Make sure you save changes to the file and then exit out of the text editor completely.</strong></li>
+  <li>Launch Windower again.</li>
+  <li>Double-click on the name that you gave for the configuration you just made (in the Windower launcher) to launch the bootloader.</li>
+  <li>If this is your first time playing on XIWeb, you will need to create an account and a password</li> and use such to connect to XIWeb.</li>
+  <li>If you already have an account on XIWeb, you need to use the account and password you created to connect to XIWeb.</li>
 </ol>
