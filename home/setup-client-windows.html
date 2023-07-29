@@ -34,7 +34,7 @@ dateCreated: 2021-07-31T00:51:51.573Z
 <h6>PlayOnline Setup</h6>
 <ul>
   <li>Open PlayOnline Viewer and go through the prompts using your PlayOnline account you have registered previously. If you don't have an account, you can just enter a faux one that is 4 Letters, followed by 4 numbers (i.e., you can enter <code>ABCD1234</code> if you don't have one).</li>
-  <li><strong>Close PlayOnline.</strong>strong></li>
+  <li><strong>Close PlayOnline.</strong></li>
 </ul>
 <p>&nbsp;</p>
 <h6>Game - Update Steps (semi-automatic)</h6>
@@ -105,18 +105,18 @@ dateCreated: 2021-07-31T00:51:51.573Z
   <li>Give the new profile a name (click on the <strong>New Profile 1</strong> and change it to a new name of your choice) and then click on the <strong>left-pointing arrow</strong> in the upper-left corner of the profile. (Make sure to remember the name you gave the profile)</strong></li>
   <li><strong>Close the Windower launcher.</strong></li>
   <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">XiLoader.exe</a> into the <strong>PlayOnlineViewer</strong> sub-folder of the SquareEnix subfolder of your PlayOnline folder on your computer (created in the Game - Installation steps at the top of this page) .</li>
+  <li>An example of the above would be: <code>C:\PlayOnline\SquareEnix\PlayOnlineViewer</code></li> &larr; this is only an example, this may not be the path to yours, adjust as necessary!
   <li>Navigate to the folder that you installed Windower into and open <strong>settings.xml</strong> with some type of text editor, such as Windows Notepad or Notepad++.</li>
   <li>You'll need to add the <executable>XiLoader.exe</executable> to every profile (including the profile you just created) you see in settings.xml, as well as the <args> </args> with your server information and login.</li>
-  <li>Here is an example profile (you can copy and paste the below code block into the file:</li>
-  ```
-  <profile name="local">
-    <consolekey>Insert</consolekey>
-    <args>--server xiweb.catsangel.com</args>
-    <executable>DRIVE_LETTER:\path\to\xiloader.exe</executable>
-  </profile>
-  ```
+  <li>Here is an example profile (you can copy and paste the below code block into the file):</li>
+<pre><code>  &lt;profile name="xiweb"&gt;
+    &lt;consolekey&gt;Insert&lt;/consolekey&gt;
+    &lt;args&gt;--server xiweb.catsangel.com&lt;/args&gt;
+    &lt;executable&gt;DRIVE_LETTER:\path\to\xiloader.exe&lt;/executable&gt;
+  &lt;/profile&gt;
+</code></pre>
   <li>Note the <code>path\to\</code> portion in the <code>&lt;executable&gt;</code> section cannot contain spaces and cannot be a relative path.</li>
-  <li>An example of the path is: <code>&lt;executable&gt;C:\PlayOnline\SquareEnix\PlayOnlineViewer\&lt;/executable&gt;</code></li>
+  <li>An example of the path is: <code>&lt;executable&gt;C:\PlayOnline\SquareEnix\PlayOnlineViewer\&lt;/executable&gt;</code></li> &larr; this is only an EXAMPLE, this may not be the path to yours, adjust as necessary!
   <li><strong>Make sure you save changes to the file and then exit out of the text editor completely.</strong></li>
   <li>Launch Windower again.</li>
   <li>Double-click on the name that you gave for the configuration you just made (in the Windower launcher) to launch the bootloader.</li>
