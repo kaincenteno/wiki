@@ -12,7 +12,7 @@ $file_txt = @'
 '@
 
 
-if (Get-Item "${game_path}file.txt") {
+if (Test-Path "${game_path}file.txt") {
     Remove-Item "${game_path}file.txt"
 }
 
