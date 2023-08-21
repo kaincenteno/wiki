@@ -1,0 +1,140 @@
+<!--
+title: Client Setup (Linux or Windows)
+description: Quick walkthrough on how to set up your client for Linux or Windows.
+published: true
+date: 2023-08-23T07:56:51.813Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-08-23T07:56:51.813Z
+-->
+
+<li><strong>NOTE:</strong>Usage of the verbs <strong>directory</strong> and <strong>folder</strong> are used interchangeably in this document. Apply the correct verb usage depending on if you are installing under Linux or Windows.
+
+<h2>Requirements (specific for Linux Installations)</h2>
+<p>&nbsp;</p>
+<ol>
+  <li>Admin/superuser account access on the machine</li>
+  <li><strong>Wine</strong> or <strong>Proton</strong> installed on the machine</li>
+  <li>At least 10GB available (for game installation)</li>
+</ol>
+
+<h2>Requirements (specific for Windows installations)</h2>
+<p>&nbsp;</p>
+<ol>
+  <li>Administrator account/permissions on the machine</li>
+  <li>Windows 10/11 (or newer) installed on the machine</li>
+  <li>At least 10GB available (for game installation)</li>
+  <li>Know how to use Windows File Explorer</li>
+  <li>Know how to run .exe files as an administrator</li>
+  <li>Know how to use Windows Powershell as an administrator</li>
+  <li>Know how to use Windows Command Prompt as an administrator</li>
+</ol>
+<p>&nbsp;</p>
+<h6>Game - Installation Steps</h6>
+<ol>
+  <li>Download the <a href="http://www.playonline.com/ff11us/download/media/install_win.html"> Final Fantasi XI/PlayOnline installer files (download all of them to the same directory/folder!)</a>.</li>
+  <li>Run <strong>FFXIFullSetup_US.part1.exe</strong> to decompress the installer files</li>
+  <li>Run <strong>FFXISETUP.exe</strong> after decompression completes to begin installing Final Fantasy XI (FFXI) and PlayOnline (POL).</li>
+  <li>To avoid possible future issues with allowing FFXI to access/modify its own files, it is best to install FFXI and POL to a directory/folder of its own on your computer (we'll use <strong>C:\PlayOnline\</strong> as an example).</li>
+  <li>Make sure to <strong>install everything</strong> that prompts on the installer.</li>
+  <li>Once you are done with the installation we can move to the setup phase.</li>
+</ol>
+<p>&nbsp;</p>
+<h6>PlayOnline Setup</h6>
+<ul>
+  <li>Open PlayOnline Viewer.  If you have never used PlayOnline before, it will prompt you update PlayOnline, do so and make sure to restart PlayOnline after it updates.</li>
+  <li>Choose <strong>For PlayOnline Members!</strong></li>
+  <li>Go through the prompts using your PlayOnline account you have registered previously. If you don't have an account, you can just enter a faux one that is 4 Letters, followed by 4 numbers (i.e., you can enter <code>ABCD1234</code> for the Member Name and PlayOnline ID.</li>
+  <li>It is not required to provide a <strong>PlayOnline Password</strong> or a <strong>SquareEnix ID</strong>, so skip entering those.
+  <li><strong>Close PlayOnline.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h6>Game - Update Steps (semi-automatic)</h6>
+<ul>
+  <li><strong>NOTE:</strong> If you installed under Linux, or if you encounter errors/issues with any of the following steps in this section, <strong>STOP HERE</strong> and/or skip down to the steps in the "Game - Update Steps (manual)" section below.</li>
+  <li>Download the <a href="/update_xi.ps1"><strong>update_xi.ps1</strong></a> script (note the location it was downloaded to, you'll need that shortly).</li>
+  <li>Open Powershell <strong>as an administrator</strong>.</li>
+  <li>Run <code>powershell.exe -ExecutionPolicy Bypass</code> to allow running the script.</li>
+  <li>Navigate to the directory/folder that <strong>update_xi.ps1</strong> was downloaded to.</li>
+  <li>Run <strong>.\update_xi.ps1</strong>.  Playonline should start automatically after this script completes.</li>
+  <li>If Playonline didn't automatically start, open Playonline once more and choose <strong>Check Files</strong>.</li>
+  <li>On the next screen, make sure you change the <strong>Playonline-compatible software</strong> choice to <strong>FINAL FANTASY XI</strong>.</li>
+  <li>Click on <strong>Check Files</strong> to repair the files.</li>
+  <li>It should tell that a file is missing and that it needs repair, followed by a long download and install.</li>
+  <li>Once it's done repairing files, close Playonline. We can move on to the “Game - First Run” step.</li> 
+</ul>
+<p>&nbsp;</p>
+<h6>Game - Update Steps (manual)</h6>
+<ul>
+  <li><strong>NOTE:</strong> Start here if you installed under Linux, or if you encounter errors/issues with any of the following steps in previous section for  section, "Game - Update Steps (semi-automatic).</li>
+  <li>Navigate to the directory/folder that you installed FFXI into (as mentioned above, we'll use <strong>C:\PlayOnline\</strong> as an example).  Go into the SquareEnix sub-directory/sub-folder followed by the FINAL FANTASY XI sub-directory/sub-folder (for full clarity, again using the above directory as our example, the path to the directory/folder you should be at would be <strong>C:\PlayOnline\SquareEnix\FINAL FANTASY XI</strong></li>
+  <li>Create a new file called <strong>file.txt</strong></li>
+  <li>Open <strong>file.txt</strong> with some type of text editor, such as Windows Notepad or Notepad++ (if installed under Windows) or Vi/VIM editor, Nano editor, Gedit editor (if installed under Linux), or any other editor of your choice for whichever operating system you are using)</li>
+  <li>Populate <strong>file.txt</strong> it with the info below. <strong><mark class="pen-red">Make sure to also add a 3rd empty line!</mark></strong></li>
+</ul>
+<pre><code class="language-plaintext">123456:654321:FTABLE.DAT
+::
+</code></pre>
+<ul>
+  <li>Save the file and then exit out of the text editor.</li>
+  <li>Open Playonline once more and choose <strong>Check Files</strong>.</li>
+  <li>On the next screen, make sure you change the <strong>Playonline-compatible software</strong> choice to <strong>FINAL FANTASY XI</strong>.</li>
+  <li>Click on <strong>Check Files</strong> to repair the files.</li>
+  <li>It should tell that a file is missing and that it needs repair, followed by a long download and install.</li>
+  <li>Once it's done repairing files, close Playonline. We can move on to the “Game - First Run” step.</li> 
+</ul>
+<p>&nbsp;</p>
+<h6>Game - First Run</h6>
+<ol><li>To run FFXI for the first time (and all subsequent times), you have a choice of three "bootloaders" that are used to load the game and connect to the XIWeb game server:</li></ol>
+<p>&nbsp;</p> 
+<h6>XILoader (the barebones bootloader, loads the game and nothing else, best for testing out issues before reporting them)</h6>
+<ol>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">xioader.exe</a> <strong>into a directory of its own</strong>.</li>
+  <li>Open Command Prompt <strong>as an administrator</strong>.</li>
+  <li>Find the directory/folder where you downloaded xiloader.exe to and run it as follows:</li>
+</ol>
+<pre><code class="language-plaintext">xiloader.exe --server xiweb.catsangel.com</code></pre>
+<p>&nbsp;</p>
+<h6>Ashita (a bootloader that includes a variety of addons/plugins to enhance your playing experience) (more geared towards players on private servers like XIWeb)</h6>
+<ol>
+  <li>Download <a href="https://git.ashitaxi.com/Ashita/Ashitav3-Launcher/raw/master/Ashita.exe">Ashita.exe</a> <strong>into a directory of its own</strong>.</li>
+  <li>Run Ashita.exe <strong>as an administrator</strong>.  Ashita will download all other necessary files and then present you with the Ashita launcher</li>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">xiloader.exe</a> into the <strong>ffxi-bootmod</strong> sub-directory/sub-folder of your Ashita directory/folder.</li>
+  <li>In the Ashita launcher, click on the <strong>+</strong> icon in the bottom-left of the Ashita Launcher window.</li>
+  <li>Click on the New Configuration that was just created then click on the <strong>Pencil</strong> icon (that is to the right of the <strong>+</strong> icon) in the bottom-left of the Ashita Launcher window.</li>
+  <li>Give your new configuration a name (xiweb or whatever name you wish).</li>
+  <li>For the <strong>File:</strong> line, use: <code>.\\ffxi-bootmod\\xiloader.exe</code></li>
+  <li>For the <strong>Command:</strong> line, use: <code>--server xiweb.catsangel.com</code></li>
+  <li>Click on the icon in the bottom-center of the window to save your changes (the icon looks like a sheet of paper with a checkmark).</li>
+  <li>Double-click on the name that you gave for the configuration you just made (in the Ashita launcher) to launch the bootloader.</li>
+  <li>If this is your first time playing on XIWeb, you will need to create an account and a password and use such to connect to XIWeb.</li>
+  <li>If you already have an account on XIWeb, you need to use the account and password you created to connect to XIWeb.</li>
+</ol>
+<p>&nbsp;</p>
+<h6>Windower (a bootloader that includes a variety of addons/plugins to enhance your playing experience) (more geared towards players on retail FFXI but can also be used for private servers like XIWeb)</h6>
+<ol>
+  <li>Download <a href="https://update.windower.net/live/windower.msi">Windower.msi</a> <strong>into a directory of its own</strong>.</li>
+  <li>Run Windower.msi <strong>as an administrator</strong>.  Windower will install to a directory/folder of your choice (best to use the directory/folder you downloaded Windower.msi into)</li>
+  <li>Navigate to the directory/folder you installed Windower into and run Windower.exe <strong>as an administrator</strong>. Windower will download all other necessary files and then present you with the Windower launcher.</li>
+  <li>In the Windower launcher, click on the <strong>+</strong> in the bottom-left of the Ashita Launcher window to create a new profile.</li>
+  <li>Give the new profile a name (click on the <strong>New Profile 1</strong> and change it to a new name of your choice) and then click on the <strong>left-pointing arrow</strong> in the upper-left corner of the profile. (Make sure to remember the name you gave the profile)</li>
+  <li><strong>Close the Windower launcher.</strong></li>
+  <li>Download <a href="https://github.com/LandSandBoat/xiloader/releases">xiloader.exe</a> into the <strong>PlayOnlineViewer</strong> sub-directory/sub-folder of the SquareEnix sub-directory/sub-folder of your PlayOnline directory/folder on your computer (created in the Game - Installation steps at the top of this page) .</li>
+  <li>An example of the above would be: <code>C:\PlayOnline\SquareEnix\PlayOnlineViewer</code> &larr; this is only an example, this may not be the path to yours, adjust as necessary!</li>
+  <li>Navigate to the directory/folder that you installed Windower into and open <strong>settings.xml</strong> with some type of text editor, such as Windows Notepad or Notepad++.</li>
+  <li>You'll need to add the <executable>xiloader.exe</executable> to every profile (including the profile you just created) you see in settings.xml, as well as the <args> </args> with your server information and login.</li>
+  <li>Here is an example profile (you can copy and paste the below code block into the file if you wish):</li>
+<pre><code>  &lt;profile name="xiweb"&gt;
+    &lt;consolekey&gt;Insert&lt;/consolekey&gt;
+    &lt;args&gt;--server xiweb.catsangel.com&lt;/args&gt;
+    &lt;executable&gt;DRIVE_LETTER:\path\to\xiloader.exe&lt;/executable&gt;
+  &lt;/profile&gt;
+</code></pre>
+  <li>Note the <code>path\to\</code> portion in the <code>&lt;executable&gt;</code> section cannot contain spaces and cannot be a relative path.</li>
+  <li>An example of the full path is: <code>&lt;executable&gt;C:\PlayOnline\SquareEnix\PlayOnlineViewer\xiloader.exe&lt;/executable&gt;</code></li> &larr; this is only an EXAMPLE, this may not be the path to yours, adjust as necessary!
+  <li><strong>Make sure you save changes to the file and then exit out of the text editor completely.</strong></li>
+  <li>Launch Windower again.</li>
+  <li>Double-click on the name that you gave for the configuration you just made (in the Windower launcher) to launch the bootloader.</li>
+  <li>If this is your first time playing on XIWeb, you will need to create an account and a password and use such to connect to XIWeb.</li>
+  <li>If you already have an account on XIWeb, you need to use the account and password you created to connect to XIWeb.</li>
+</ol>
